@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Charmonman:400,700|Niramit:600|Open+Sans|Passion+One:700" rel="stylesheet">
+    <title>Music Through the Decades</title>
+
+    <script>
+      function musicSelector() {
+        console.log("Got change.");
+        var chooser = document.getElementById("musicByDecade");
+        var options = chooser.options;
+        var counter = 0;
+
+        while (counter < options.length) {
+          if (options[counter].selected) {
+            document.getElementById(options[counter].value).style.display = "";
+          } else {
+            document.getElementById(options[counter].value).style.display = "none";
+          }
+          counter = counter + 1;
+        }
+      }
+    </script>
+
+  </head>
+  <body onload="musicSelector();">
+    <div class="jumbotron">
+      <h1 class="text-center display-2 text-white">Music Through the Ages</h1>
+    </div>
+    <div class="container">
+
+      <div class="text-center quote">
+        <h3>
+          <em>"Music is the greatest communication in the world. Even if people don't understand the language that you're singing in, they still know good music when they hear it."</em>
+          <span class="quoteCite">-- Lou Rawls</span></h3>
+      </div>
+      <!-- End of quote div -->
+      <div class="intro">
+        <h2>Welcome to the Music by Decade Generator</h2>
+        <p>Nothing can define a decade more than the music derived from those eras. Each decade has its own style, class, and way of expressing itself, as did the music from each decade.</p>
+        <p>What if we can take the best music from each decade, aggregate them into a single playlist, and then be able to offer them as we demanded them?
+        </p>
+
+        <div class="form-group">
+          <select id="musicByDecade" onchange="musicSelector();" class="form-control-sm warning">
+            <option value="placeHolder">Please select a decade</option>
+            <option value="musicOfSixties">Vinyl Record (60's)</option>
+            <option value="musicOfSeventies">8-Track (70's)</option>
+            <option value="musicOfEighties">Cassette Tape (80's)</option>
+            <option value="musicOfNineties">Compact Disc (90's)</option>
+            <option value="musicOfAughts">MP3 Player (00's)</option>
+          </select>
+        </div>
+        <!-- End of form group div -->
+      </div>
+      <!-- End of intro div -->
+
+      <div id="placeHolder"></div>
+      <!-- End of placeHolder div -->
+
+      <div id="musicOfSixties" class="row">
+        <div class="col-md-6">
+          <h2>Welcome to the 60's</h2>
+          <p>The time of peace, war, love, hate, and Motown.</p>
+        </div>
+        <div class="col-md-6">
+          <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXaKIA8E7WcJj" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+      <!-- End of musicOfSixties div -->
+
+      <div id="musicOfSeventies" class="row">
+        <div class="col-md-6">
+          <h2>Welcome to the 70's</h2>
+          <p>The time that gave us high gas prices, bell bottom pants, a burgeoning woman's movement, and
+            <em>disco</em>?</p>
+        </div>
+        <div class="col-md-6">
+          <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWTJ7xPn4vNaz" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+      <!-- End of musicOfSeventies div -->
+
+      <div id="musicOfEighties" class="row">
+        <div class="col-md-6">
+          <h2>Welcome to the 80's</h2>
+          <p>The time of America's midlife crisis.</p>
+        </div>
+        <div class="col-md-6">
+          <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX4UtSsGT1Sbe" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+      <!-- End of musicOfEighties div -->
+
+      <div id="musicOfNineties" class="row">
+        <div class="col-md-6">
+          <h2>Welcome to the 90's</h2>
+          <p>The time that gave us Nintendo 64, Airwalk skater shoes, Saved By the Bell, and gangsta rap.</p>
+        </div>
+        <div class="col-md-6">
+          <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXbTxeAdrVG2l" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+      <!-- End of musicOfNineties div -->
+
+      <div id="musicOfAughts" class="row">
+        <div class="col-md-6">
+          <h2>Welcome to the 00's</h2>
+          <p>Yeah...Nickelback...sorry!</p>
+        </div>
+        <div class="col-md-6">
+          <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX4o1oenSJRJd" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+      <!-- End of musicOfAughts div -->
+
+    </div>
+    <!-- End of container div -->
+    <footer class="page-footer">
+      <div class="footer-copyright text-center text-white py-4">
+        <span class="text-center">&copy
+          <em>Copyright 2018 Daniel Aberle</em>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
